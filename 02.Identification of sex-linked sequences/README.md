@@ -1,4 +1,4 @@
-#1. Identification of Z-linked sequences:
+**#1. Identification of Z-linked sequences:**
 
 We identified the Z chromosome sequences out of the draft genomes based on their alignments to the Z chromosome sequences of ostrich(Zhang, et al. 2015; Yazdi and Ellegren 2018), and also a female-specific reduction of read depth.
 
@@ -10,7 +10,7 @@ Based on the whole genome alignments, we first identified the best aligned scaff
 
 Finally, scaffolds were ordered and oriented into pseudo-chromosome sequences according to their unique positions on the reference. Scaffolds were linked with 600 ‘N’s as a mark of separation. 
 
-#2. Identification of W-linked sequences:
+**#2. Identification of W-linked sequences:**
 
 W-linked sequences are expected to also form an alignment with the reference Z chromosome of ostrich, but with lower numbers of aligned sequences and lower levels of sequence identity than their homologous Z-linked sequences, due to the accumulation of deleterious mutations after recombination was suppressed on the W. 
 
