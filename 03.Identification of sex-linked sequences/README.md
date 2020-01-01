@@ -6,12 +6,19 @@ Scaffold sequences of each species were aligned with LASTZ(Harris 2007) (version
 
 Alignments were converted into a series of syntenic ‘chains’, ‘net’ and ‘maf’ results with different levels of alignment scores using UCSC Genome Browser’s utilities (http://genomewiki.ucsc.edu/index.php/). 
 
-  > perl lacnem.pl target.rm.fa query.rm.fa --parasuit chick  --qsub --direction outdir
+  > perl lacnem.pl target.rm.fa query.rm.fa --parasuit chick  --qsub --direction lastZ.outdir
 
 Based on the whole genome alignments, we first identified the best aligned scaffolds within the overlapping regions on the reference genome, according to their alignment scores with a cutoff of at least 50% of the whole scaffold length aligned in the LASTZ net results. We further estimated the overall identity and coverage distributions with a 10kb non-overlapped sliding window for each scaffold along the reference sequence, and obtained the distributions of identity and coverage. Scaffolds within the lower 5% region of each distribution were removed to avoid spurious alignments. 
 
+  > sh maf_chain_fa.sh lastZ.outdir Scam_Norn query.rm.fa psupseudoChr.outdir
+  
 Finally, scaffolds were ordered and oriented into pseudo-chromosome sequences according to their unique positions on the reference. Scaffolds were linked with 600 ‘N’s as a mark of separation. 
-
+  
+  > cd psupseudoChr.outdir
+  
+  > grep chrZ scafOrderM_M.txt | awk '{print $2 "\t" $6 "\t" $7 "\t" "." "\t" "." "\t" "." "\t" $10 }'  > scafOrderM_M.chrZ.txt
+  
+  > perl fasta_artificial_chrZ.pl query.rm.fa scafOrderM_M.chrZ.txt > chrZ.rm.fa
 
   
 **#2. Identification of W-linked sequences:**
