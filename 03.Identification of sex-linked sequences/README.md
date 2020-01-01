@@ -25,17 +25,17 @@ Finally, scaffolds were ordered and oriented into pseudo-chromosome sequences ac
 
 W-linked sequences are expected to also form an alignment with the reference Z chromosome of ostrich, but with lower numbers of aligned sequences and lower levels of sequence identity than their homologous Z-linked sequences, due to the accumulation of deleterious mutations after recombination was suppressed on the W. 
 
-  ## pick up W-linked candidates
+   pick up W-linked candidates
   
   unmap.txt is the unmapping scaffolds/contigs produced at step 2
   > perl obtainFa.pl unmap.txt query.rm.fa  1 Positive > Scam_Norn.unmap.mask.fa
 
 We also expect that there are still certain degrees (at least 70% as a cutoff) of sequence similarities between the Z- and W-linked sequences, for discriminating the true W-linked sequences from spurious alignments. After excluding the Z-linked sequences from the draft genome, we performed a second round of LASTZ alignment against the Z chromosome sequences of each species built from the above step. Then we excluded the spurious alignments with the cutoff of the pairwise sequence identity to be higher than 70%, but lower than 95%, and with the aligned sequences spanning at least 50% of the scaffold length. 
 
-   ## perform lastZ alignment using w-linked candidates against chrZ.
+   perform lastZ alignment using w-linked candidates against chrZ.
    > repeat step 1, but replace "target.rm.fa" with chrZ.rm.fa, replace "query.rm.fa" with Scam_Norn.unmap.mask.fa
 
-  ## deal lastZ alignment
+   deal lastZ alignment
   > cd 2round.lastZ.outdir/7.maf
   
   > perl dealW-linked/Maf2table.pl all.maf name .
