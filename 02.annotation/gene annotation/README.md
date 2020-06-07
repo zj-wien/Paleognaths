@@ -1,5 +1,8 @@
 **Homology-based prediction
-Please refer to https://github.com/gigascience/paper-zhang2014/tree/master/Gene_annotation
+
+Please refer to 
+
+ >https://github.com/gigascience/paper-zhang2014/tree/master/Gene_annotation
 
 
 
