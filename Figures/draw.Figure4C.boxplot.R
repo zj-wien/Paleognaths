@@ -1,0 +1,5 @@
+args = commandArgs(T)
+pdf(args[1])
+library(ggplot2)
+Data <- read.table(args[2],sep="\t",header = T)
+ggplot(Data,aes(x=factor(chr),y=log2(rpkm+1))) + geom_boxplot(color=c("#d73027","#1a9850","#d73027","#1a9850"),outlier.colour=NA,size = 1,width=.8) + facet_grid(.~tissue)+ theme(axis.text.x = element_text(colour = 'black', angle = 0, size = 15, hjust = 0.5, vjust = 0.5), axis.text.y = element_text( angle = 0, size = 15, hjust = 0.5, vjust = 0.5), axis.title.y = element_text(size = rel(1.5), angle = 90)) +ylab("log2(rpkm+1)") + xlab("")  + theme(strip.text = element_text(face="bold", size=rel(1.3)),strip.background = element_rect(size=5)) + scale_x_discrete(limits=c("chrW","chrZ")) #+ coord_cartesian(ylim = c(0, 4)) + theme(legend.position="none")
