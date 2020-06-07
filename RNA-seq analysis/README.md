@@ -1,2 +1,3 @@
-**RNA read alignment**
-sh 
+**Align the rna-seq reads to the genome**
+
+  >sh  
