@@ -1,4 +1,4 @@
-** Calculate Ka/Ks using KaKs_Calculator
+**Calculate Ka/Ks using KaKs_Calculator **
 
   shell Script: pepMfa_to_cdsMfa.pl 
   
@@ -17,3 +17,7 @@
   >done
   
 pepMfa_to_cdsMfa.pl -- convert protein alignment to cds alignment
+
+**Draw distribution of pairwise Ks values between Z/W gametologs along the Z chromosome of each studied species.
+
+  Rscript  draw.Ks.all.species.point.R all.ks.2.txt.pdf all.ks.2.txt
