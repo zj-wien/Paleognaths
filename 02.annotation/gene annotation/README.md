@@ -1,3 +1,10 @@
+**Homology-based prediction
+Please refer to https://github.com/gigascience/paper-zhang2014/tree/master/Gene_annotation
+
+
+
+
+
 **denovo.sh**
 
 fa='/ifs5/NGB_UN/USER/wangzj/PaleognathousBirds/01.assembly/Northocercus_nigracapillus/Nnig.fa'
