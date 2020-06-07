@@ -15,3 +15,5 @@
   >KaKs_Calculator -i $CDS.muscle -o $CDS.muscle.kaks
   
   >done
+  
+  ### pepMfa_to_cdsMfa.pl -- convert protein alignment to cds alignment
