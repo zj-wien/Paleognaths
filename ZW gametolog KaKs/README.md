@@ -16,4 +16,4 @@
   
   >done
   
-  ### pepMfa_to_cdsMfa.pl -- convert protein alignment to cds alignment
+pepMfa_to_cdsMfa.pl -- convert protein alignment to cds alignment
